@@ -35,8 +35,12 @@ public class GameManagement : MonoBehaviour
         {
             levelHasCompleted = true;
             hudManagement.ShowLevelCompleted();
-            Invoke(nameof(RestartLevel), restartDelay);
         }
+    }
+
+    public void GoToNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void RestartLevel()
