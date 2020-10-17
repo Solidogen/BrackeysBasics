@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour
@@ -11,12 +12,18 @@ public class GameManagement : MonoBehaviour
         if (!gameHasEnded)
         {
             gameHasEnded = true;
-            Debug.Log("GAME OVER");
+            FindObjectOfType<HudManagement>().ShowPlayerDeath();
             Invoke(nameof(RestartGame), restartDelay);
         }
     }
 
-    void RestartGame()
+    public void CompleteLevel()
+    {
+        FindObjectOfType<HudManagement>().ShowLevelCompleted();
+        Invoke(nameof(RestartGame), restartDelay);
+    }
+
+    private void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

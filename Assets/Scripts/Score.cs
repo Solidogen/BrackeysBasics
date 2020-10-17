@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
     [SerializeField]
     private Transform playerTransform = default;
 
-    [SerializeField]
-    private Text text = default;
+    private HudManagement hudManagement;
+
+    void Awake()
+    {
+        hudManagement = FindObjectOfType<HudManagement>();
+    }
 
     void Update()
     {
-        text.text = playerTransform.position.z.ToString("0");
+        hudManagement.UpdateScore(playerTransform.position.z.ToString("0"));
     }
 }
