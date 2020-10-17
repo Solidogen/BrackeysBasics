@@ -12,7 +12,13 @@ public class HudManagement : MonoBehaviour
     [SerializeField]
     private GameObject levelCompletePanel = default;
 
-    public void UpdateScore(string score)
+    void Awake()
+    {
+        playerDeathText.gameObject.SetActive(false);
+        levelCompletePanel.gameObject.SetActive(false);
+    }
+
+    public void ShowUpdatedScore(string score)
     {
         scoreText.text = score;
     }

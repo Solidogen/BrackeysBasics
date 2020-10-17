@@ -9,9 +9,8 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "Obstacle")
         {
-            Debug.Log("Hit an obstacle");
             movement.enabled = false;
-            FindObjectOfType<GameManagement>().EndGame();
+            FindObjectOfType<GameManagement>().PlayerDied();
         }
     }
 }

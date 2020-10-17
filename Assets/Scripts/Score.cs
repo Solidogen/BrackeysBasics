@@ -5,15 +5,15 @@ public class Score : MonoBehaviour
     [SerializeField]
     private Transform playerTransform = default;
 
-    private HudManagement hudManagement;
+    private GameManagement gameManagement;
 
     void Awake()
     {
-        hudManagement = FindObjectOfType<HudManagement>();
+        gameManagement = FindObjectOfType<GameManagement>();
     }
 
     void Update()
     {
-        hudManagement.UpdateScore(playerTransform.position.z.ToString("0"));
+        gameManagement.ScoreUpdated(playerTransform.position.z.ToString("0"));
     }
 }

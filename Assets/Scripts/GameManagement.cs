@@ -4,26 +4,42 @@ using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour
 {
-    private bool gameHasEnded = false;
-    private float restartDelay = 1f;
+    private bool playedHasDied = false;
+    private bool levelHasCompleted = false;
+    private float restartDelay = 2f;
+    private HudManagement hudManagement;
 
-    public void EndGame()
+    void Awake()
     {
-        if (!gameHasEnded)
+        hudManagement = FindObjectOfType<HudManagement>();
+    }
+
+    public void ScoreUpdated(string score)
+    {
+        hudManagement.ShowUpdatedScore(score);
+    }
+
+    public void PlayerDied()
+    {
+        if (!playedHasDied && !levelHasCompleted)
         {
-            gameHasEnded = true;
-            FindObjectOfType<HudManagement>().ShowPlayerDeath();
-            Invoke(nameof(RestartGame), restartDelay);
+            playedHasDied = true;
+            hudManagement.ShowPlayerDeath();
+            Invoke(nameof(RestartLevel), restartDelay);
         }
     }
 
     public void CompleteLevel()
     {
-        FindObjectOfType<HudManagement>().ShowLevelCompleted();
-        Invoke(nameof(RestartGame), restartDelay);
+        if (!levelHasCompleted && !playedHasDied)
+        {
+            levelHasCompleted = true;
+            hudManagement.ShowLevelCompleted();
+            Invoke(nameof(RestartLevel), restartDelay);
+        }
     }
 
-    private void RestartGame()
+    private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

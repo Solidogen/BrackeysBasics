@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (rb.position.y < -1f)
         {
-            FindObjectOfType<GameManagement>().EndGame();
+            FindObjectOfType<GameManagement>().PlayerDied();
         }
     }
 }
