@@ -2,6 +2,11 @@
 
 public class PlayerMovement : MonoBehaviour
 {
+/* 
+    TODO store enum [left, right, none] in update method from keys.
+    then in fixedUpdate check enum value and apply force if needed.
+ */
+
     private Rigidbody rb;
     public float forwardForce = 2000f;
     public float sidewaysForce = 500f;
