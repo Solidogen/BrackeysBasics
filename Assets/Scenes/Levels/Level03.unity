@@ -2274,6 +2274,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2983996350120206283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4780238517520181236, guid: 8be3057c78be9ab65b13a4a3dbf550ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2983996350120206281}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639171b0731d65d8fa6d8cb8b50e4451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2983996350120206284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7943441430615512978, guid: 8be3057c78be9ab65b13a4a3dbf550ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2983996350120206281}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639171b0731d65d8fa6d8cb8b50e4451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4678352741857576555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2405,6 +2429,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4846562338667862550, guid: 7816fb3ec38d2a8538944192be65e577,
+        type: 3}
+      propertyPath: leftButtonPressedDetector
+      value: 
+      objectReference: {fileID: 2983996350120206284}
+    - target: {fileID: 4846562338667862550, guid: 7816fb3ec38d2a8538944192be65e577,
+        type: 3}
+      propertyPath: rightButtonPressedDetector
+      value: 
+      objectReference: {fileID: 2983996350120206283}
     - target: {fileID: 4846562338667862556, guid: 7816fb3ec38d2a8538944192be65e577,
         type: 3}
       propertyPath: m_Name
