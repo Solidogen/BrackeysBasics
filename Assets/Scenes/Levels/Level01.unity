@@ -1020,6 +1020,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b66eda54251b9fa6b847bf0fa2619aa, type: 3}
+--- !u!1 &1203718478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 264827222, guid: 8be3057c78be9ab65b13a4a3dbf550ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2983996350120206281}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1203718479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203718478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639171b0731d65d8fa6d8cb8b50e4451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1344859626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1458,6 +1476,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b66eda54251b9fa6b847bf0fa2619aa, type: 3}
+--- !u!1 &1633252880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1718333984, guid: 8be3057c78be9ab65b13a4a3dbf550ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2983996350120206281}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1633252881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633252880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639171b0731d65d8fa6d8cb8b50e4451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1736488741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,6 +2027,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4846562338667862550, guid: 7816fb3ec38d2a8538944192be65e577,
+        type: 3}
+      propertyPath: leftButtonPressedDetector
+      value: 
+      objectReference: {fileID: 1633252881}
+    - target: {fileID: 4846562338667862550, guid: 7816fb3ec38d2a8538944192be65e577,
+        type: 3}
+      propertyPath: rightButtonPressedDetector
+      value: 
+      objectReference: {fileID: 1203718479}
     - target: {fileID: 4846562338667862556, guid: 7816fb3ec38d2a8538944192be65e577,
         type: 3}
       propertyPath: m_Name
